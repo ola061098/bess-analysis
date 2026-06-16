@@ -18,3 +18,7 @@ def bess_profit(buy_price, sell_price, capacity_mwh=100, efficiency=0.90):
     cost = buy_price * capacity_mwh
     revenue = sell_price * capacity_mwh * efficiency
     return revenue - cost
+
+def round_trip_efficiency(charge_mwh, discharge_mwh):
+    """Calculate actual round-trip efficiency."""
+    return discharge_mwh / charge_mwh
