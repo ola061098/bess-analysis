@@ -12,3 +12,9 @@ if __name__ == "__main__":
 def calculate_spread(prices):
     """Calculate the daily spread between max and min price."""
     return prices.max() - prices.min()
+
+def bess_profit(buy_price, sell_price, capacity_mwh=100, efficiency=0.90):
+    """Calculate profit from one charge/discharge cycle."""
+    cost = buy_price * capacity_mwh
+    revenue = sell_price * capacity_mwh * efficiency
+    return revenue - cost
