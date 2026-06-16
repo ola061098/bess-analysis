@@ -7,3 +7,8 @@ def load_prices(filepath):
 
 if __name__ == "__main__":
     print("BESS Analysis Tool")
+
+
+def calculate_spread(prices):
+    """Calculate the daily spread between max and min price."""
+    return prices.max() - prices.min()
